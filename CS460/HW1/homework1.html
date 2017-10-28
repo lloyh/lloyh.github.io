@@ -15,55 +15,8 @@
     <body>
         
         <div class="topnav">
-            <a href="https://lloyh.github.io/home">Home</a>            
-        </div>
-        
-<!--
-        <div class="row">
-            <div class="column">
-                <center>
-                    <div style="padding-left:5px" class="col-md-10"> 
-                        <h2>Luis Loyh</h2>
-                        <p><b>Western Oregon University</b></p>
-                        <p>CS 460, Fall Term 2017</p>
-                        <p>CS 461, Winter Term 2018</p>
-                        <p>CS 462, Spring Term 2018</p>
-                    </div>
-                </center> 
-            </div>
-            <div class="column">
-                <div style="padding-left:5px" class="col-md-10">
-                    <h2>CS 460 Homework 1 Blog</h2>
-                    <p>
-                        intro
-                    </p>
-                    
-                    <h3>subtitle</h3>
-                    <p>
-                        text 
-                    </p>
-                    
-                    <h3>subtitle</h3>
-                    <p>
-                        text
-                    </p>
-
-                
-                    <div id="" style="overflow:scroll; height:auto;">
-                        <p>this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text </p>
-                        
-                        <p>this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text </p>
-                        
-                        <p>this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text this is some text </p>
-                        
-
-                
-                    </div>
-                </div>            
-            </div>
-        </div>
--->
-        
+            <a href="https://lloyh.github.io/home">Portfolio Page</a>            
+        </div> 
         
         <div class="row">
             <div class="columnLeft">
@@ -81,31 +34,139 @@
                 <div style="padding-left:5px" class="col-md-15">
                     <h2>CS 460 Homework 1 Blog</h2>
                     <p>
-                        In this assignment we learned basic HTML5 and CSS coding. We also leared to use Git source control via Git Bash. This is an important skill to learn as it allows multiple software developers to work simultaniously on the same source code. Git also allows to revert changes to the code when needed.
+                        In this assignment we learned the coding essentials of HTML5, CSS and Bootstrap. We also learned to use Git source control via Git Bash. This is an important skill to learn as it allows multiple software developers to work simultaneously on the same source code. Git also allows to revert changes to the code when needed.
                     </p>
                     
-                    <h3>subtitle</h3>
+                    <h3>Setting up Git</h3>
                     <p>
-                        text 
+                        For this part of the assignment I downloaded Git Bash and fired it up. I watched a couple of YouTube video tutorials and created GitHub and Bitbucket accounts. Shortly after I had successfully created a test repository and some test branches. I thereafter created a working repository on Bitbucket for this assignment.  
                     </p>
                     
-                    <h3>subtitle</h3>
+                    <h3>Coding HTML, CSS and Bootstrap</h3>
                     <p>
-                        text
+                        Through some online research (primarily via the w3schools.com website) I was able to fulfil the first requirement of my website: the navigation bar. The following code snippets is the general template in HTML and CSS I created that presents a consistent navigation bar in all the webpages I created.
                     </p>
                 
-                    <div id="" style="overflow:scroll; height:auto;">
-                        <p>
-                            text
-                        </p>
-                        <img src="resources/test_image.JPG">             
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/1_navigation_section.JPG">
+                    </div>
+                    <p>
+                        This is the CSS code that formats the navigation bar so that “Home” is a different color and the rest of the links are highlighted when the mouse point hovers over them:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/1_navigation_section_CSS.JPG">   
+                    </div>
+                    <p>
+                        In order to make my webpages content responsive to device screen and window size, I included a Bootstrap template in my code from getbootstrap.com:                    
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/1_bootstrap.JPG">   
                     </div>                    
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/1_bootstrap_.JPG">   
+                    </div>
+                    
+                    <h3>The website content and its webpages</h3>
+                    <p>
+                        I decided to make my website about Tesla Motors. From the navigation bar, the “Home” link will be directing to the index page that presents the assignment requirements. The “Tesla Motors” link will direct to the page that shows a brief introduction to all Tesla vehicles with text and images to each vehicle and will link each car to its corresponding webpage. The “Contact” link will direct to a webpage that contains the company’s general phone numbers and email information. The “About” link will link to a page that presents a picture of the current production vehicles along with general information about electric vehicles and facts about each vehicle.
+                    </p>
+                    <p>
+                        From the tesla_lineup.html page (accessed via the “Tesla Motors” navigation link) each vehicle picture and corresponding model name will be links to their corresponding pages with brief information and other pictures of the same vehicle. I placed each image inside of div elements which in turn each one is part of an unordered list. This meets one of the assignment requirements.
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/2_tesla_lineup_a.JPG">
+                        <img src="resources/2_tesla_lineup_b.JPG">           
+                    </div>
+                    <h3>Resizing images</h3>
+                    <p>
+                        On of the first challenges I encountered was adjusting images to have similar dimensions. I did some research and coded a way to format each image groups accordingly for the pages that contained them:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3_css_resizing_images.JPG">   
+                    </div>
+                    
+                    
+                    
+                    
+                    <h3>The vehicle pages</h3>
+                    <p>
+                        Coding all four car pages was essentially easy as once I had created the first one (the one about the Tesla Roadster), given nature of uniformity of the pages, I was able to put together the other three pages rather swiftly.
+                    </p>
+                    <p>
+                        This is the page about the Roadster:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/4_roadster.JPG">   
+                    </div>
+                    <p>
+                        This is the page about the Model S:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/4_s.JPG">   
+                    </div>
+                    <p>
+                        This is the page about the Model X:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/4_x.JPG">   
+                    </div>
+                    <p>
+                        This is the page about the Model 3:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/4_model_3.JPG">   
+                    </div>
+                    <p>
+                        Notice the “resize2” CSS style object. I coded this in order to customize the images on each vehicle page allowing them to remain in a large size presentation on their respective pages (relative to the browser window size). 
+                    </p>
+                    
+                    
+                    
+                    
+                    
+                    <h3>The contact information page</h3>
+                    <p>
+                        This is the company’s contact information. I obtained the emails and phone numbers from Tesla.com:
+                    </p>
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/5_contact.JPG">   
+                    </div>
+                    
+                    
+                    
+                    <h3></h3>
+                    <p>
+                    </p>
+                    
+                    
+                    <h3></h3>
+                    <p>
+                    </p>
+                    
+                    <h3></h3>
+                    <p>
+                    </p>
+                    
+                    
+                    
+                    <h3></h3>
+                    <p>
+                    </p>
+                    
+                    
+                    
+                    <h3></h3>
+                    <p>
+                    </p>
+                    
+                    
+                    <h3></h3>
+                    <p>
+                    </p>
+                    
                 </div>            
             </div>
-        </div>
-        
-            
-        
+        </div>       
         
             
         <!-- JavaScript and JQuery -->

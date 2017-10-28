@@ -1,18 +1,3 @@
-/*
-pre code 
-{
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
-}
-*/
-
-
-
-
-
-
 body 
 {
     margin:0;    
@@ -21,9 +6,8 @@ body
 * 
 {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-
 
 /* Style the header */
 .header 
@@ -74,19 +58,22 @@ body
     clear: both;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout: it makes the two columns (left and right) stack on top of each other instead of next to each other */
 @media (max-width:600px) 
 {
-    .column 
+    .columnLeft 
     {
         width: 100%;
     }
 }
 
-
-
-
-
+@media (max-width:600px) 
+{
+    .columnRight 
+    {
+        width: 100%;
+    }
+}
 
 .columnLeft 
 {
@@ -110,22 +97,7 @@ body
     clear: both;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width:600px) 
-{
-    .columnLeft 
-    {
-        width: 100%;
-    }
-}
-
-@media (max-width:600px) 
-{
-    .columnRight 
-    {
-        width: 100%;
-    }
-}
+/
 
 /*
 .mydiv 
