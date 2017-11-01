@@ -18,7 +18,42 @@
         <center>
             <h1>Monthly Mortgage Payment Calculator</h1>
         
+            <div class="container" id="myCalc" style="padding-left:16px; border-style:groove; border-radius: 20px">
+            <form id="myForm">            
+            <div class="form-group row">
+                <label for="value" class="col-sm-4 col-form-label">
+                    Loan Amount:
+                </label>            
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="loanAmount" placeholder="$">                
+                </div>
+            </div>
             
+            <div class="form-group row">
+                <label for="value" class="col-sm-4 col-form-label">
+                    APR:
+                </label>
+                <div class="col-sm-4">
+                    <input type="text" min="0" max="100" class="form-control" id="apr" placeholder="%">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="value" class="col-sm-4 col-form-label">
+                    Loan Term:
+                </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="loanTerm" placeholder="Number of Years">
+                </div>            
+            </div>
+            
+            <!-- Calculate button (submits the form input)                -->
+            <div class="form-group row" >                
+                    <input id="calculate" type="button" value="Calculate" style="margin: 10px; padding: 0px; width: 100"/>   
+            </div>            
+
+        </form>
+        </div>
             
             
             
