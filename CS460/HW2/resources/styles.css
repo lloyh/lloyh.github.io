@@ -12,3 +12,19 @@ h1
 {
     color: white !important;
 }
+
+/*JQuery styling*/
+.important 
+{
+    font-weight: bold;    
+}
+
+.blue 
+{    
+	background-color: cadetblue
+}
+
+.red
+{
+	background-color: #e0a0a0
+}
