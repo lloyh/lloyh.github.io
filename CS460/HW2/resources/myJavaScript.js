@@ -44,8 +44,12 @@ function validate()
 
     } 
     else 
-    {
-       getValues();
+	{
+		//if invalid input div was visible, clear it before calculating
+		//results as both divs could be presented if the user did not
+		//click ok to clear the invalid input div
+		document.getElementById("invalidResult").style.display="none";
+       	getValues();
 
     }
 }
