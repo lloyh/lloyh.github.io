@@ -27,6 +27,20 @@ function validate()
 			$("#invalidResult").css("color","red");
 			$("#invalidResult").addClass("important red");
 		});
+		
+		//Add an UL of invalid input to child div under error div
+		//This overrides all elements currently in innerDiv div
+		$(document).ready(function(){    		
+        	$("#innerDiv").html("<ul id=\"jqueryUL\">\
+					<li>Only numerical values allowed</li>\
+					<li>The form must be fully filled out</li>\
+					<li>No letters or symbol characters allowed</li>\
+					<li>No commas allowed</li>\
+					</ul> ");
+			//no bullet points in UL
+			$("#jqueryUL").css("list-style-type","none");
+						
+		});	
 
     } 
     else 
@@ -67,13 +81,17 @@ function formReset(x) {
 
 
 function getValues()
-{                
+{
+	//get values from form
     loanTerm = document.getElementById("loanTerm").value;
     apr = document.getElementById("apr").value;
     loanAmount = document.getElementById("loanAmount").value;
-
+	
+	//adjust APR
     apr /= 1200;
+	//convert years to months
     loanTerm *= 12;
+	//calculate payments
     payment = calculatePayment();
 
     document.getElementById("payment").value = "$" + payment.toFixed(2);
@@ -86,21 +104,9 @@ function getValues()
 	
 }
 
+//calculates payments on a monthly basis
 function calculatePayment()
 {
     var payment = loanAmount*(apr * Math.pow((1 + apr), loanTerm))/(Math.pow((1 + apr), loanTerm) - 1);
     return payment;
 }
-
-//$(document).ready(function(){
-//    $("button").click(function(){
-//        $("h1, h2, p").addClass("blue");
-//        $("div").addClass("important");
-//    });
-//});
-//
-//$(document).ready(function(){
-//    $("button").click(function(){
-//        $("p").css("background-color", "yellow");
-//    });
-//});
