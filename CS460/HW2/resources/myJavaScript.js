@@ -63,7 +63,7 @@ window.onload = function()
 
 }
 
-//Removes a div
+//Removes a div, if the div is not on page, it presents the div instead
 function removeDiv(x)
 {
     var divStatus = document.getElementById(x);

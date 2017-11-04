@@ -53,14 +53,144 @@
                     </div>
 					<div id="" style="overflow:scroll; height:auto;">    
                         <img src="resources/1-2-branching.JPG">
+                    </div>					
+					
+					<h3>The Wireframes</h3>
+                    <p>
+                        The following is the wireframe of initial design of the webpage. It uses JavaScript and jQuery to take user input (Loan Amount, APR and Loan Term) and calculates the monthly mortgage payment. 
+                    </p>                    
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/wireframe1.JPG">
                     </div>
 					<p>
-						
+						In the event the user enters incorrect data, the JavaScript and jQuery code will uncover a block of information that will prompt the user the input was invalid. This block will also have a button to clear the form and the message block itself.
+					</p>
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/wireframe3.JPG">
+                    </div>
+					<p>
+						If the input is correct, a second block will appear on screen with the results.
+					</p>
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/wireframe2.JPG">
+                    </div>				
+					
+					
+					<h3>The HTML Code</h3>
+                    <p>
+                        I started by creating the webpage form using Bootstrap’s form-group row layouts for optimum spacing. I placed each label and input pairs in their own block with this attribute.  
+                    </p>
+                    
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-1-form.JPG">
+                    </div>
+					<p>
+						When the user enters the correct input, a specific block becomes visible. This is triggered by the JavaScript and jQuery code and contains a button that clears the block and the form itself.				
+					</p>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-2-validInput.JPG">
+                    </div>
+					<p>
+						This is the block that because visible when the input is incorrect. It also contains an “OK” button that clears the message and rests the form.
 					</p>
 					
-					<h3>subtitle</h3>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-3-invalidInput.JPG">
+                    </div>
+					
+					<h3>jQuery</h3>
                     <p>
-                        paragraph.  
+                        The jQuery library is accessed by the main index page upon loading via the following:  
+                    </p>
+                    
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-1-jQuery.JPG">
+                    </div>				
+					
+					<h3>The Code</h3>
+                    <p>
+                        I placed all JavaScript and jQuery code in a separate file called “myJavaScript.js”. When the user clicks on the “Calculate” button, the following validation code is executed.  
+                    </p>
+                    
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-2-validate.JPG">
+                    </div>
+					
+					<p>
+						If the input is valid, the calculation is execution via the following functions.		
+					</p>
+					<p>
+						Global variables declared:
+					</p>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-3-global-variables.JPG">
+                    </div>	
+					
+					<p>
+						The focus on the first form field is instantiated upon loading of the webpage:				
+					</p>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-4-on-load.JPG">
+                    </div>
+					
+					<p>
+						The calculation is triggered:					
+					</p>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-5-getValues-and-calculatePayment.JPG">
+                    </div>
+					
+					<p>
+						The block of information with the results is presented then removed upon the user clicking on the "Clear Form" button:
+						
+					</p>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-6-removeDiv-resetForm.JPG">
+                    </div>
+					
+					<p>
+						In the event the input is invalid, from the function “validate()” presented above, the following code is executed: 
+						
+					</p>
+					<div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-7-validate-if_invalid.JPG">
+                    </div>
+					
+					<p>
+						This part of the code uses jQuery to modify the div element that presents the error message. First it styles the parent div “invalidResult” and then it overrides the child element named “innerDiv” and places an unordered list of valid and invalid data accepted. 
+						
+					</p>				
+					
+					
+					<h3>CSS Styling</h3>
+                    <p>
+                        The CSS styling of this page is rather compact. The body class includes the instruction “!important” to be able to override Bootstrap’s default blank background default setting. This is also that case for font colors.  
+                    </p>
+                    
+					<!-- snippet frame   -->
+                    <div id="" style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-8-css.JPG">
+                    </div>
+					<p>
+						The jQuery styling portion are custom classes that are applied in the invalid input message. 
+					</p>
+					
+					
+					
+					
+					
+					
+					
+					
+					<h3>Merging the assignment branch back into the master branch</h3>
+                    <p>
+                        Lastly, as I finished this assignment, I checked out the Master branch and from there, merged all changes back into it from the homework2 branch:  
                     </p>
                     
 					<!-- snippet frame   -->
@@ -68,55 +198,7 @@
                         <img src="">
                     </div>
 					
-					<h3>subtitle</h3>
-                    <p>
-                        paragraph.  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
 					
-					<h3>subtitle</h3>
-                    <p>
-                        paragraph.  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-					
-					<h3>subtitle</h3>
-                    <p>
-                        paragraph.  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-					
-					<h3>subtitle</h3>
-                    <p>
-                        paragraph.  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-					
-					<h3>subtitle</h3>
-                    <p>
-                        paragraph.  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
                     
 					
 					
