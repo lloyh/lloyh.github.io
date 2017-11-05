@@ -11,8 +11,14 @@ namespace homework3
     {
         static void Main(string[] args)
         {
-
-        }
+            LinkedStack<double> stack = new LinkedStack<double>();
+            bool playAgain = true;
+            string[] operators = { "+", "-", "/", "*" };
+            while (playAgain)
+            {
+                
+            }
             
+        }
     }
 }
