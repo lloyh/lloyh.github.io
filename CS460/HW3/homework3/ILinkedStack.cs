@@ -8,6 +8,19 @@ namespace homework3
 {
     interface ILinkedStack<T>
     {
-        
+        //pop
+        T Pop();
+
+        //peek
+        T Peek();
+
+        //push
+        void Push(T item);
+
+        //clear
+        void Clear();
+
+        //is empty
+        bool IsEmpty();
     }
 }
