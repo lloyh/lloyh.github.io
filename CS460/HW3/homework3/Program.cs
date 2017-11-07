@@ -11,6 +11,8 @@ namespace homework3
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("POSTFIX CALCULATOR");
+            Console.WriteLine("Please enter postfix expression(s) to be evaluated. Press 'q' to quit.");
             LinkedStack<double> stack = new LinkedStack<double>();
             bool playAgain = true;
             string[] operators = { "+", "-", "/", "*" };
