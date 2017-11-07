@@ -1,7 +1,0 @@
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\obj\Debug\homework3.csprojResolveAssemblyReference.cache
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\obj\Debug\homework3.csproj.CoreCompileInputs.cache
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\bin\Debug\homework3.exe.config
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\bin\Debug\homework3.exe
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\bin\Debug\homework3.pdb
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\obj\Debug\homework3.exe
-C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW3\homework3\obj\Debug\homework3.pdb
