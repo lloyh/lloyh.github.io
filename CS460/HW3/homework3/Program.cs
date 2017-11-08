@@ -20,7 +20,10 @@ namespace homework3
             {
                 stack.Clear();
                 //get input from the user
-                string[] input = Console.ReadLine().Split(' ');
+                //string[] input = Console.ReadLine().Split(' ');
+                string tempInput = Console.ReadLine();
+                tempInput = tempInput.Trim();
+                string[] input = new Regex(@"\s+").Split(tempInput);
                 //exit if q is pressed
                 if (input[0] == "q")
                 {
