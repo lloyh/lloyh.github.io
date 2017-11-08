@@ -81,7 +81,7 @@ namespace homework3
                                 }
                                 if (a == double.NegativeInfinity || b == double.NegativeInfinity)
                                 {
-                                    Console.WriteLine("The stack is currently empty!!!");
+                                    Console.WriteLine("Error: The stack is currently empty, please enter a valid postfix expression");
                                     stack.Clear();
                                     break;
                                 }
@@ -154,11 +154,11 @@ namespace homework3
                             }
                         }
                     }
+                    //if input was valid, there should only be one item to pop from the stack, if not the input was invalid
                     if (!stack.IsEmpty())
                     {
-                        Console.WriteLine(stack.Pop().ToString());
-                    }
-                    
+                        Console.WriteLine("      = " + stack.Pop().ToString());
+                    }              
 
                 }
 
