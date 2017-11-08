@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace homework3
 {
+    /// <summary>
+    /// Templated Node constructor
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class Node<T>
     {
         private T data;

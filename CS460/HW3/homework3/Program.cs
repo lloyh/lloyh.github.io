@@ -19,8 +19,7 @@ namespace homework3
             while (playAgain)
             {
                 stack.Clear();
-                //get input from the user
-                //string[] input = Console.ReadLine().Split(' ');
+                //get input from the user               
                 string tempInput = Console.ReadLine();
                 tempInput = tempInput.Trim();
                 string[] input = new Regex(@"\s+").Split(tempInput);

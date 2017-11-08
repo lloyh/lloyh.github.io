@@ -38,146 +38,157 @@
                         <a href="https://github.com/lloyh/lloyh.github.io/tree/hmw3/CS460/HW3/homework3">Homework 3 Branch Repository</a>
                     </p>
 					<p>
-						For this assignment, we converted Java code to C#. The assignment requirements can be accessed at this link: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW3.html">CS 460 Homework 3 Page.</a> 
+						For this assignment, we converted Java code to C#. The assignment requirements can be accessed at this link: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW3.html">CS 460 Homework 3 Page.</a> The Java program consists of a Postfix calculator and it is composed of four source code files: Calculator.java, LinkedStack.java, Node.java and StackADT.java. 
 					</p>                    
                     
-                    <h3>Subtitle</h3>
+                    <h3>Setting Up Visual Studio</h3>
                     <p>
-                        Paragraph  
+                        I began by downloading Visual Studio Community 2017 from www.visualstudio.com. I installed it and set up the proper working folders on my local machine for this assignment.  
                     </p>
+					
+					<h3>Git Branching Set Up</h3>
+                    <p>
+                        I first created a Git branch called “hw3” but I had to reset all my working folders and then created another branch called “hmw3” as I had some merging issues at one point when I went back to the master branch and made some changes for another assignment. Branch “hmw3” is now the most up-to-date branch with this assignment code. I ran the following commands to set it up. 
+                    </p>  
                     
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/1-1.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/1-2.JPG">
                     </div>
 									
+					
+					<h3>Coding in C#</h3>
+                    <p>
+                        Given that my lower division programming course work background has been primarily in C++ and the fact that I have never programmed in Java, fully understanding the Java source code for this assignment took me some time and a good number of hours of researching. Once I fully understood the code, I proceeded to learning the basics of C# and started implementing the necessary classes class declarations and interface as outlined in the Java code. 
+                    </p>                    
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-1.JPG">
+                    </div>
+					<p>
+						First, I created a templated class called Node. It constructs a generic node that holds a data value and a pointer to the next node. If the node is null, this indicates the node is the head of the chain of nodes.						
+					</p>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-2.JPG">
+                    </div>
+					<p>
+						Second, I coded the LinkedStack class and its interface ILinkedStack.cs. This class creates a linked list, adds and removes nodes to and from the list, checks if the list is empty, returns the top of the stack (the last node added to the linked list) and resets the linked list.
+					</p>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-3.JPG">
+						<img src="resources/2-4.JPG">
+						<img src="resources/2-5.JPG">
+                    </div>
+					
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-6.JPG">
+                    </div>
+					<p>
+						The most challenging part of this C# code was Program.cs. The program first presents a title introduction and a brief instruction to enter a valid postfix expression to evaluate. It then creates a linked stack of doubles called “stack.” The while loop runs again and again until the user enters “q.” The loop first clears the stack, reads the user input as a string, trims any white spaces before and after the string entered (if any) and parses the string entered placing each character in a string array called “input.” Any number of spaces entered between characters is ignored via the Regex method: <img src="resources/2-7.JPG">
+					</p>
+					
+				
+					
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
-					
-					<h3>Subtitle</h3>
-                    <p>
-                        Paragraph  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-									
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
-					
-					<h3>Subtitle</h3>
-                    <p>
-                        Paragraph  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-									
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
-					
-					<h3>Subtitle</h3>
-                    <p>
-                        Paragraph  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-									
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
-					
-					<h3>Subtitle</h3>
-                    <p>
-                        Paragraph  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-									
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
-					
-					<h3>Subtitle</h3>
-                    <p>
-                        Paragraph  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-									
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
-					
-					<h3>Subtitle</h3>
-                    <p>
-                        Paragraph  
-                    </p>
-                    
-					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
-                        <img src="">
-                    </div>
-									
 					
 					<h3>Subtitle</h3>
                     <p>
                         Paragraph 
                     </p>                    
 					<!-- snippet frame   -->
-                    <div id="" style="overflow:scroll; height:auto;">    
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>                    
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>                    
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>                    
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>                    
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
                         <img src="">
                     </div>
 					
