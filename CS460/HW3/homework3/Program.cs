@@ -41,6 +41,7 @@ namespace homework3
                             catch (Exception e)
                             {
                                 Console.WriteLine("Error: Invalid character entered!!");
+                                stack.Clear();
                                 break;
                             }
                         }
@@ -57,6 +58,7 @@ namespace homework3
                             if (location == -1)
                             {
                                 Console.WriteLine("Invalid input detected");
+                                stack.Clear();
                                 break;
                             }
 
@@ -77,6 +79,7 @@ namespace homework3
                                 if (a == double.NegativeInfinity || b == double.NegativeInfinity)
                                 {
                                     Console.WriteLine("The stack is currently empty!!!");
+                                    stack.Clear();
                                     break;
                                 }
                                 stack.Push(a + b);
@@ -95,6 +98,7 @@ namespace homework3
                                 if (a == double.NegativeInfinity || b == double.NegativeInfinity)
                                 {
                                     Console.WriteLine("The stack is currently empty!!!");
+                                    stack.Clear();
                                     break;
                                 }
                                 stack.Push(a - b);
@@ -112,14 +116,20 @@ namespace homework3
                                 }
                                 if (a == double.NegativeInfinity || b == double.NegativeInfinity)
                                 {
-                                    Console.WriteLine("The stack is currently empty!!!");
+                                    Console.WriteLine("The stack is currently empty! Please enter a correct postfix expression.");
+                                    stack.Clear();
                                     break;
                                 }
                                 if (b == 0)
                                 {
                                     Console.WriteLine("Error: Cannot divide by 0!");
+                                    stack.Clear();
+                                    break;
                                 }
+                                                       
                                 stack.Push(a / b);
+                                
+                                
                             }
                             //3 == *
                             else
@@ -134,14 +144,18 @@ namespace homework3
                                 }
                                 if (a == double.NegativeInfinity || b == double.NegativeInfinity)
                                 {
-                                    Console.WriteLine("The stack is currently empty!!!");
+                                    Console.WriteLine("The stack is currently empty! Please enter a correct postfix expression.");
                                     break;
                                 }
                                 stack.Push(a * b);
                             }
                         }
                     }
-                    Console.WriteLine(stack.Pop().ToString());
+                    if (!stack.IsEmpty())
+                    {
+                        Console.WriteLine(stack.Pop().ToString());
+                    }
+                    
 
                 }
 
