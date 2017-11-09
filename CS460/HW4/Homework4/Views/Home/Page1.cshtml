@@ -7,8 +7,8 @@
 <h2>Page 1</h2>
 
 <div>
-
-    <form id="myForm" action="Page1" method="get">
+    
+    <form action="~/Home/Page1">
         <div class="form-group row">
             <label for="value" class="col-sm-4 col-form-label">
                 Enter Temperature:
@@ -26,10 +26,10 @@
                 <input type="text" class="form-control" name="unit" placeholder="unit (F or C)">
             </div>
         </div>        
-
+       
         <!-- Calculate button (submits the form input)  -->
         <div class="form-group row">
-            <input id="submit" type="submit" value="sumbit"/>
+            <input type="submit" value="Submit" formmethod="get"/>
         </div>
 
     </form>
