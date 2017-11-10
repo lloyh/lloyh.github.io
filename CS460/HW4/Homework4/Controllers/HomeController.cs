@@ -125,6 +125,21 @@ namespace Homework4.Controllers
             ViewBag.response = resultString;
             return View();
         }
-        
+
+        [HttpGet]
+        public ActionResult Page3()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Page3(FormCollection form)
+        {
+            return View();
+
+        }
+
+
+
     }
 }
