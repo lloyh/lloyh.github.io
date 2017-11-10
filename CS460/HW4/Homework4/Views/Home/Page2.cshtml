@@ -1,8 +1,42 @@
 ﻿
 @{
-    ViewBag.Title = "Page2";
+    ViewBag.Title = "Page 2";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Page2</h2>
+<h2>Page 2</h2>
+
+<div>
+
+    <form action="~/Home/Page2">
+        <div class="form-group row">
+            <label for="value" class="col-sm-4 col-form-label">
+                Enter Temperature:
+            </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="temperature" placeholder="temperature">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="value" class="col-sm-4 col-form-label">
+                Temperature Unit:
+            </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="unit" placeholder="unit (F or C)">
+            </div>
+        </div>
+
+        <!-- Calculate button (submits the form input)  -->
+        <div class="form-group row">
+            <input type="submit" value="Submit" formmethod="post" />
+        </div>
+
+    </form>
+
+</div>
+
+<p>
+    @ViewBag.response
+</p>
 
