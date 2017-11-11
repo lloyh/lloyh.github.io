@@ -135,12 +135,22 @@ namespace Homework4.Controllers
         [HttpPost]
         public ActionResult Page3(string loanAmount, string apr, string loanTerm )
         {
-            ViewBag.response = (loanAmount + ", " + apr + ", " + loanTerm);
+            //Calculation
+            //retrieve variables
+            double theLoanAmount = Convert.ToDouble(loanAmount);
+            double theApr = Convert.ToDouble(apr);
+            double theLoanTerm = Convert.ToDouble(loanTerm);
+
+            theApr /= 1200;         //adjust apr
+            theLoanTerm *= 12;      //convert years to months
+            double payment = 
+                theLoanAmount 
+                * (theApr * Math.Pow((1 + theApr), theLoanTerm)) 
+                / (Math.Pow((1 + theApr), theLoanTerm) -1);
+             
+            ViewBag.response = (theLoanAmount + ", " + theApr + ", " + theLoanTerm + " Payment (as decimal): " + Convert.ToDecimal(payment).ToString("C") + " Payment (as double): " + payment);
             return View();
-
         }
-
-
 
     }
 }
