@@ -142,13 +142,16 @@ namespace Homework4.Controllers
             double theLoanTerm = Convert.ToDouble(loanTerm);
 
             theApr /= 1200;         //adjust apr
-            theLoanTerm *= 12;      //convert years to months
+            theLoanTerm *= 12;      //convert years to months, it also indicates the number of payments
             double payment = 
                 theLoanAmount 
                 * (theApr * Math.Pow((1 + theApr), theLoanTerm)) 
                 / (Math.Pow((1 + theApr), theLoanTerm) -1);
+
+            double numberOfPayments = theLoanTerm;  //number of payments = number of months to pay off the loan
+            double totalAmountToPay = numberOfPayments * payment;
              
-            ViewBag.response = (theLoanAmount + ", " + theApr + ", " + theLoanTerm + " Payment (as decimal): " + Convert.ToDecimal(payment).ToString("C") + " Payment (as double): " + payment);
+            ViewBag.response = ("Monthly Payment (as decimal): " + Convert.ToDecimal(payment).ToString("C") + " Number of payments: " + numberOfPayments + " Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C"));
             return View();
         }
 
