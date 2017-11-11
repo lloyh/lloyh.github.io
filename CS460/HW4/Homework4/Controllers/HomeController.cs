@@ -133,8 +133,9 @@ namespace Homework4.Controllers
         }
 
         [HttpPost]
-        public ActionResult Page3(FormCollection form)
+        public ActionResult Page3(string loanAmount, string apr, string loanTerm )
         {
+            ViewBag.response = (loanAmount + ", " + apr + ", " + loanTerm);
             return View();
 
         }
