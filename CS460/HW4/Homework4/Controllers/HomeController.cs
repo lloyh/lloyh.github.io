@@ -25,8 +25,7 @@ namespace Homework4.Controllers
             ViewBag.Message = "This is my contact page.";
 
             return View();
-        }       
-             
+        }             
 
         [HttpGet]
         public ActionResult Page1()
@@ -126,22 +125,45 @@ namespace Homework4.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Returns default view for Page 3
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Page3()
         {
             return View();
         }
 
+        /// <summary>
+        /// Calculates a loan monthly payment
+        /// </summary>
+        /// <param name="loanAmount"> The loan amount to borrow from a lender</param>
+        /// <param name="apr"> the interest rate</param>
+        /// <param name="loanTerm"> The number of years to repay the loan and interest back</param>
+        /// <returns>Returns the monthly payment amount, the number of payments and the total sum of payments on a different view called "Page3_Result"</returns>
         [HttpPost]
         public ActionResult Page3(string loanAmount, string apr, string loanTerm )
         {
-            string returnMessage = "";
+            //When loading page, both inputs should be empty, do not evaluate, just return empty view
+            if (loanAmount == null || apr == null || loanTerm == null || loanAmount == "" || apr == "" || loanTerm == "")
+            {                
+                return View();
+            }
+
+            string returnMessage = "";  //string that holds ViewBag return message
+
+            //Attempt to parse the input into doubles by placing them into double type variables
+            if (!double.TryParse(loanAmount, out double theLoanAmount) || !double.TryParse(apr, out double theApr) || !double.TryParse(loanTerm, out double theLoanTerm))
+            {
+                returnMessage = "Error: Invalid input, please only enter whole umbers or decimals into text boxes";
+                ViewBag.response = returnMessage;
+                return View("Page3_Result");
+            }
+            
             //Calculation
             //retrieve variables
-            double theLoanAmount = Convert.ToDouble(loanAmount);
-            double theApr = Convert.ToDouble(apr);
-            double theLoanTerm = Convert.ToDouble(loanTerm);
-
+            
             theApr /= 1200;         //adjust apr
             theLoanTerm *= 12;      //convert years to months, it also indicates the number of payments
             double payment = 
@@ -152,9 +174,8 @@ namespace Homework4.Controllers
             double numberOfPayments = theLoanTerm;  //number of payments = number of months to pay off the loan
             double totalAmountToPay = numberOfPayments * payment;
 
-            returnMessage = "Monthly Payment: " + Convert.ToDecimal(payment).ToString("C") + " Number of payments: " + numberOfPayments + " Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C");
-             
-            //ViewBag.response = ("Monthly Payment (as decimal): " + Convert.ToDecimal(payment).ToString("C") + " Number of payments: " + numberOfPayments + " Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C"));
+            returnMessage = "Monthly Payment: " + Convert.ToDecimal(payment).ToString("C") + ", Number of payments: " + numberOfPayments + ", Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C");
+            
             ViewBag.response = (returnMessage);
             return View("Page3_Result");
         }
