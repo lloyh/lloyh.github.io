@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Luis Loyh</title>
+        
+        <!-- CSS file -->
+        <link rel="stylesheet" href="resources/blog_styles.css">
+                
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <a href="../../home.html">Portfolio Page</a>            
+        </div>
+            
+        <div class="row">
+            <div class="columnLeft">
+                <center>
+                    <div style="padding-left:5px" class="col-md-10"> 
+                        <h2>Luis Loyh</h2>
+                        <p><b>Western Oregon University</b></p>
+                        <p>CS 460, Fall Term 2017</p>
+                        <p>CS 461, Winter Term 2018</p>
+                        <p>CS 462, Spring Term 2018</p>
+                    </div>
+                </center> 
+            </div>
+            <div class="columnRight">
+                <div style="padding-left:5px" class="col-md-15">
+                    <h2>CS 460 Homework 4 Blog</h2>
+                    <p> 
+                        The source code for this assignment can be downloaded from the following URL: 
+                        <a href="https://github.com/lloyh/lloyh.github.io/tree/hmw3/CS460/HW4/Homework4">Homework 4 Code Repository</a>
+                    </p>
+					<p>
+						For this assignment, I created an ASP.NET MVC 5 multi-page web application. It uses language constructs from the Razor view engine and utilizes C# language features such as namespaces, classes and methods. The assignment requirements can be accessed at this link: <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW4.html">CS 460 Homework 4 Page.</a>  
+					</p>                    
+                    
+                    <h3>Git Set Up and Starting a New MVC Project</h3>
+                    <p>
+                        I began this assignment by creating a new git branch called “hmw4-initial_setup” and a .gitignore file tailored to MVC projects in Visual Studio from the following github source: <a href="https://github.com/github/gitignore/blob/master/VisualStudio.gitignore">.gitignore for Visual Studio</a> This file ignores all temporary build files as well as built binary ones.
+                    </p>
+					<p>
+						I then proceeded to create a new MVC project in Visual Studio. As outlined by the assignment definitions, I made a “Home” default landing page (Index.cshtml) that contains Razor links to each of the pages outlined via @Html.ActionLink in an ul list.
+					</p>
+										                   
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a.JPG">
+                    </div>
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/1-1.JPG">
+                    </div>
+					
+					<br>
+					<h3>Page 1: A Temperature Converter Using HTTP Method GET</h3>
+                    <p>
+                        After creating and checking out a new git branch for this feature, I added to my project a new page called Page1.cshtml. In it, I made a form that takes two inputs and submits the data to the Controller (HomeController.cs) via a GET Method. This method transmits the data via the web URL and thus it is cashed by the web browser. 
+                    </p>
+										                   
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-1.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-1.JPG">
+                    </div>
+					<p>
+						The method for this page defined in the controller, takes the temperature and unit strings via the GET method and first validates the input. If the input is valid, it processes the data by converting the temperature into a double and checks for the unit value to be a letter F or f for Fahrenheit and C or c for Celsius. For either valid or invalid input, the appropriate message is presented on the same webpage (at the bottom of the page) via a ViewBag response string called “resultString.” 
+					</p>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-2.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-4.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/2-5.JPG">
+                    </div>
+					<p>
+						Note: the HTTP GET method passes the string form data via the URL on the address bar.			
+					</p>
+					
+					<br>
+					<h3>Page 2: A Temperature Converter Using HTTP Method POST</h3>
+                    <p>
+                        For Page 2, I used the same validation and processing code as the page also does temperature conversions, but the data is transmitted to the server via a POST method. Unlike the GET method, post does not pass data via the URL, instead it submits data to be processed to a specified resource contained in the HTTP message body. 
+                    </p>
+										                   
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-3.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/3-1.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-4.JPG">
+                    </div>
+					
+					
+					
+					
+					<br>
+					<h3>Page 3: A Loan Calculator</h3>
+                    <p>
+                        For the third page, I created a loan calculator that takes three inputs: loan amount, APR and loan term in years. This data is also passed via a POST method and it is processed by the controller via model binding with parameters. 
+                    </p>
+										                   
+					<!-- snippet frame   -->
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-5.JPG">
+                    </div>					
+					<p>
+						The view of the page is presented as follows:
+					</p>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-7.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/4-1.JPG">
+                    </div>
+					<p>
+						The results of this function, (whether valid or invalid) are presented on another page called “Page3_Result.”
+					</p>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/a-6.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/4-3.JPG">
+                    </div>
+					<div style="overflow:scroll; height:auto;">    
+                        <img src="resources/4-5.JPG">
+                    </div>
+					<p>
+						Upon finishing each feature, I returned to the master branched and merged the changes respectively.
+					</p>
+					
+					
+					
+										                   
+					
+					
+					
+<!--					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>
+										                   
+					
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>
+										                   
+					
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>
+										                   
+					
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+					
+					<h3>Subtitle</h3>
+                    <p>
+                        Paragraph 
+                    </p>
+										                   
+					
+                    <div style="overflow:scroll; height:auto;">    
+                        <img src="">
+                    </div>
+-->					
+									
+					
+					
+						
+					                            
+                    
+                </div>            
+            </div>
+        </div>       
+        
+            
+        <!-- JavaScript and JQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+</html>

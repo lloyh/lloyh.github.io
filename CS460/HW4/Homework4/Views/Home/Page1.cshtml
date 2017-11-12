@@ -4,13 +4,13 @@
 
 }
 
-<h2>Page 1</h2>
+<h2>Page 1: Temperature Conversion (Get Method)</h2>
 
 <div>
     
     <form action="~/Home/Page1">
         <div class="form-group row">
-            <label for="value" class="col-sm-4 col-form-label">
+            <label for="value" class="col-sm-2 col-form-label">
                 Enter Temperature:
             </label>
             <div class="col-sm-4">
@@ -19,7 +19,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="value" class="col-sm-4 col-form-label">
+            <label for="value" class="col-sm-2 col-form-label">
                 Temperature Unit:
             </label>
             <div class="col-sm-4">
@@ -36,6 +36,7 @@
 
 </div>
 
+@* The result is returned at the bottom of the page *@
 <p>
     @ViewBag.response          
 </p>

@@ -144,7 +144,8 @@ namespace Homework4.Controllers
         /// <param name="loanAmount"> The loan amount to borrow from a lender</param>
         /// <param name="apr"> the interest rate</param>
         /// <param name="loanTerm"> The number of years to repay the loan and interest back</param>
-        /// <returns>Returns the monthly payment amount, the number of payments and the total sum of payments on a different view called "Page3_Result"</returns>
+        /// <returns>Returns the monthly payment amount, the number of payments and the total sum of 
+        /// payments on a different view called "Page3_Result"</returns>
         [HttpPost]
         public ActionResult Page3(string loanAmount, string apr, string loanTerm )
         {
@@ -157,7 +158,8 @@ namespace Homework4.Controllers
             string returnMessage = "";  //string that holds ViewBag return message
 
             //Attempt to parse the input into doubles by placing them into double type variables
-            if (!double.TryParse(loanAmount, out double theLoanAmount) || !double.TryParse(apr, out double theApr) || !double.TryParse(loanTerm, out double theLoanTerm))
+            if (!double.TryParse(loanAmount, out double theLoanAmount) || !double.TryParse(apr, out double theApr) || 
+                !double.TryParse(loanTerm, out double theLoanTerm))
             {
                 returnMessage = "Error: Invalid input, please only enter whole umbers or decimals into text boxes";
                 ViewBag.response = returnMessage;
@@ -177,7 +179,8 @@ namespace Homework4.Controllers
             double numberOfPayments = theLoanTerm;  //number of payments = number of months to pay off the loan
             double totalAmountToPay = numberOfPayments * payment;
 
-            returnMessage = "Monthly Payment: " + Convert.ToDecimal(payment).ToString("C") + ", Number of payments: " + numberOfPayments + ", Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C");
+            returnMessage = "Monthly Payment: " + Convert.ToDecimal(payment).ToString("C") + ", Number of payments: " + 
+                numberOfPayments + ", Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C");
             
             ViewBag.response = (returnMessage);
             return View("Page3_Result");
