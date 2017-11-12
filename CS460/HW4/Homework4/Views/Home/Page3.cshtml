@@ -3,8 +3,18 @@
     ViewBag.Title = "Page3";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@*This page takes user input and sends it to the server via a Post method.
+It calculates a loan monthly payment, number of payments and the sum of all payments to make*@
 
 <h2>Page 3: Loan Calculator</h2>
+
+<div>
+    <p> 
+        Please enter a loan amount, APR and the loan term (in years) to calculate the monthly payments, 
+        number of payments and the total sum of payments. Only numerical data is accepted, do no enter 
+        commas, porcentage or dollar signs into the input fields.
+    </p>
+</div>
 
 <form id="myForm">
     <div class="form-group row">
@@ -21,7 +31,7 @@
             APR:
         </label>
         <div class="col-sm-4">
-            <input type="text" min="0" max="100" class="form-control" id="apr" name="apr" placeholder="%">
+            <input type="text" class="form-control" id="apr" name="apr" placeholder="%">
         </div>
     </div>
 
@@ -41,6 +51,4 @@
     </div>
 
 </form>
-
-@*<p> @ViewBag.response</p>*@
 
