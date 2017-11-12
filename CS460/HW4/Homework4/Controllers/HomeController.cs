@@ -8,25 +8,19 @@ namespace Homework4.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Default action result for home page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
-        }
+        }        
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "This is my application.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "This is my contact page.";
-
-            return View();
-        }             
-
+        /// <summary>
+        /// Page 1 temperature convertion page via Get method
+        /// </summary>
+        /// <returns>viewbag string containing the temperature conversion</returns>
         [HttpGet]
         public ActionResult Page1()
         {
@@ -73,12 +67,21 @@ namespace Homework4.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Default action result page via Get method
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Page2()
         {
             return View();
         }
 
+        /// <summary>
+        /// Action result page 2 via Post Method
+        /// </summary>
+        /// <param name="form">form object variables temperature and unit</param>
+        /// <returns>viebag string with temperature conversion</returns>
         [HttpPost]
         public ActionResult Page2(FormCollection form)
         {
