@@ -135,6 +135,7 @@ namespace Homework4.Controllers
         [HttpPost]
         public ActionResult Page3(string loanAmount, string apr, string loanTerm )
         {
+            string returnMessage = "";
             //Calculation
             //retrieve variables
             double theLoanAmount = Convert.ToDouble(loanAmount);
@@ -150,9 +151,12 @@ namespace Homework4.Controllers
 
             double numberOfPayments = theLoanTerm;  //number of payments = number of months to pay off the loan
             double totalAmountToPay = numberOfPayments * payment;
+
+            returnMessage = "Monthly Payment: " + Convert.ToDecimal(payment).ToString("C") + " Number of payments: " + numberOfPayments + " Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C");
              
-            ViewBag.response = ("Monthly Payment (as decimal): " + Convert.ToDecimal(payment).ToString("C") + " Number of payments: " + numberOfPayments + " Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C"));
-            return View();
+            //ViewBag.response = ("Monthly Payment (as decimal): " + Convert.ToDecimal(payment).ToString("C") + " Number of payments: " + numberOfPayments + " Total cost of loan: " + Convert.ToDecimal(totalAmountToPay).ToString("C"));
+            ViewBag.response = (returnMessage);
+            return View("Page3_Result");
         }
 
     }
