@@ -20,7 +20,7 @@ namespace Homework5.DAL
         /// <summary>
         /// Method that gets and sets each record in the table
         /// </summary>
-        public virtual DbSet<AddressChange> AddressChange { get; set; }
+        public virtual DbSet<AddressChange> AddressChanges { get; set; }
 
     }
 }
