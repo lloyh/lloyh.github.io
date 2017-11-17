@@ -1,7 +1,7 @@
--- AddressChange table
-CREATE TABLE dbo.AddressChange
+-- AddressChanges table
+CREATE TABLE dbo.AddressChanges
 (
-	ID					INT IDENTITY (1,1) PRIMARY KEY,
+	ID					INT IDENTITY (1,1) NOT NULL,
 	ODL					INT NOT NULL,
 	DOB					DATE NOT NULL,		
 	FullName			NVARCHAR(100) NOT NULL,
@@ -11,10 +11,11 @@ CREATE TABLE dbo.AddressChange
 	NewZipCode			INT NOT NULL,
 	NewCounty			NVARCHAR(100) NOT NULL,
 	DateSubmitted		DATE NOT NULL
+	CONSTRAINT [PK_dbo.AddressChanges] PRIMARY KEY CLUSTERED (ID ASC)
 );
 	
 
-INSERT INTO AddressChange (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
+INSERT INTO dbo.AddressChanges (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
 	(12332132,'1984-11-05','James Tiberius Kirk','4550 Madrona Avenue','Salem','Oregon',97306,'Marion','2017-05-11'),
 	(45665465,'1974-07-01','Jean-Luc Picard','5370 Commercial Street','Salem','Oregon',97303,'Marion','2017-04-20'),
 	(78998798,'1970-05-07','Benjamin Sisko','309 SW 6th Avenue','Portland','Oregon',97204,'Multnomah','2016-01-01'),

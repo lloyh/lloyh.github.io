@@ -1,2 +1,2 @@
 -- Delete the table from the database
-DROP TABLE AddressChange;
+DROP TABLE dbo.AddressChanges;

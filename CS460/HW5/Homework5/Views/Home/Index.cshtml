@@ -1,4 +1,4 @@
-﻿@{
+﻿@*@{
     ViewBag.Title = "Home Page";
 }
 
@@ -9,4 +9,51 @@
 
 <div class="row">
     
+</div>*@
+
+
+
+@model IEnumerable<Homework5.Models.AddressChange>
+
+@{
+    ViewBag.Title = "Current Address Changes";
+}
+
+<div class="page-header text-center">
+    <h2>Current Address Changes</h2>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ID)</th>
+            <th>@Html.DisplayNameFor(model => model.ODL)</th>
+            <th>@Html.DisplayNameFor(model => model.DOB)</th>
+            <th>@Html.DisplayNameFor(model => model.FullName)</th>
+            <th>@Html.DisplayNameFor(model => model.NewStreetAddress)</th>
+            <th>@Html.DisplayNameFor(model => model.NewCity)</th>
+            <th>@Html.DisplayNameFor(model => model.NewState)</th>
+            <th>@Html.DisplayNameFor(model => model.NewZipCode)</th>
+            <th>@Html.DisplayNameFor(model => model.NewCounty)</th>
+            <th>@Html.DisplayNameFor(model => model.DateSubmitted)</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => item.ID)</td>
+                <td>@Html.DisplayFor(ModelItem => item.ODL)</td>
+                <td>@Html.DisplayFor(ModelItem => item.DOB)</td>
+                <td>@Html.DisplayFor(ModelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewStreetAddress)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewCity)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewState)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewZipCode)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewCounty)</td>
+                <td>@Html.DisplayFor(ModelItem => item.DateSubmitted)</td>
+            </tr>
+        }
+    </tbody>
+</table>
