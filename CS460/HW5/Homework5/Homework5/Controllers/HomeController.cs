@@ -17,10 +17,25 @@ namespace Homework5.Controllers
             return View();
         }
 
+        // POST: Home
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index([Bind(Include = "ID, ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted")] AddressChange change)
+        {
+            if (ModelState.IsValid)
+            {
+                myDatabase.AddressChanges.Add(change);
+                myDatabase.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(change);
+        }
+
         // GET: requests
         public ActionResult Requests()
         {
             return View(myDatabase.AddressChanges.ToList());
         }
+
     }
 }
