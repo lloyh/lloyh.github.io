@@ -12,6 +12,7 @@ namespace Homework5.Controllers
     {
         private AddressChangeContext myDatabase = new AddressChangeContext();
         // GET: Home
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
@@ -32,6 +33,7 @@ namespace Homework5.Controllers
         }
 
         // GET: requests
+        [HttpGet]
         public ActionResult Requests()
         {
             return View(myDatabase.AddressChanges.ToList());

@@ -45,6 +45,7 @@
     @Html.LabelFor(model => model.DateSubmitted, htmlAttributes: new { @class = "control-label" })
     @Html.EditorFor(model => model.DateSubmitted, new { htmlAttributes = new { @class = "form-control" } })
     @Html.ValidationMessageFor(model => model.DateSubmitted, "", new { @class = "text-danger" })
+    
     <input class="btn btn-primary" type="submit" value="Submit" formmethod="post" />
     <input class="btn btn-default" type="reset" value="Reset">
 }

@@ -18,6 +18,7 @@ namespace Homework5.Models
 
 
         [Required]
+        [DataType(DataType.Date)]
         [Display(Name = "Date of Birth")]
         public DateTime DOB { get; set; }
 
@@ -47,6 +48,7 @@ namespace Homework5.Models
         public string NewCounty { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         [Display(Name = "Date Submitted")]
         public DateTime DateSubmitted { get; set; }
     }
