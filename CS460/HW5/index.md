@@ -3,7 +3,7 @@ title: Luis Loyh
 layout: default
 ---
 
-<div style="overflow: hidden; background-color: #333; color: white" onclick="window.location='https://lloyh.githum.io/home';>Home</div>
+<div style="overflow: hidden; background-color: #333; color: white" onclick="window.location='https://lloyh.githum.io/home';">Home</div>
 
 
 ### Step X: Creating the model
