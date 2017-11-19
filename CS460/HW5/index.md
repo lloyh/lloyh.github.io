@@ -6,7 +6,24 @@ layout: default
 <div style="overflow: hidden; background-color: #333; color: white; width: 50px; padding: 0.5em; text-align: center" onclick="window.location='https://lloyh.github.io/home';">Home</div>
 
 
-### Step X: Creating the model
+### Homework 5: ASP.NET MVC 5 Project with a Local Database
+
+In this assignment we were tasked with creating an ASP.NET MVC 5 project with a simple one-table local database. The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5.html)
+
+The MVC project code I wrote for this homework can be accessed under the following folder in my main portfolio repository for [this assignment: Homework 5]( https://github.com/lloyh/lloyh.github.io/tree/master/CS460/HW5)
+
+I began this project by creating an initial git branch:
+
+git checkout -b hmw5-initial_setup
+
+This command tries to find branch name “hmw5-initial_setup” and when not found (it creates it given the command string “-b”) and checks it out.
+When I was done with this branch I applied the following commands to merge the changes into the master branch:
+
+git  checkout master
+git merge hmw5-initial_setup
+
+As I continued wiring the different pieces of code for this assignment I created appropriate branch names and these can be accessed via my repository as outlined above.
+
 
 Here is where I created the model that would represent the data inside the database. *this is very important* **this is even more important** ***This is the most important thing ever!***
 
