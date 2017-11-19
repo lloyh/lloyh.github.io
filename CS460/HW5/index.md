@@ -2,15 +2,14 @@
 title: Luis Loyh
 layout: default
 ---
+
+<div style="overflow: hidden; background-color: #333;">
+	<a href="https://lloyh.github.io/home" style="float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>            
+</div>
+
 ### Subject 1
 
-Some stuff....
 
-
-more stuff...
-
-
-code stuff:
 ```csharp
 @model Homework5.Models.AddressChange
 
