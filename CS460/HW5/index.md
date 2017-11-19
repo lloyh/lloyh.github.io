@@ -7,7 +7,9 @@ layout: default
 	<a href="https://lloyh.github.io/home" style="float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>            
 </div>
 
-### Subject 1
+### Step X: Creating the model
+
+Here is where I created the model that would represent the data inside the database. *this is very important* **this is even more important** ***This is the most important thing ever!***
 
 
 ```csharp
