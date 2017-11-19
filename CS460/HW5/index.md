@@ -8,21 +8,34 @@ layout: default
 
 ### Homework 5: ASP.NET MVC 5 Project with a Local Database
 
-In this assignment we were tasked with creating an ASP.NET MVC 5 project with a simple one-table local database. The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5.html)
+In this assignment we were tasked with creating an ASP.NET MVC 5 project with a simple one-table local database. The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5.html) The assignment consists of creating a DMV address change request in which a simple form is presented for someone moving to fill out. The form is submitted and entered into a local database. Another page simply displays the database table with all its records.
 
 The MVC project code I wrote for this homework can be accessed under the following folder in my main portfolio repository for [this assignment: Homework 5]( https://github.com/lloyh/lloyh.github.io/tree/master/CS460/HW5)
 
+## Initial Git Setup
+
 I began this project by creating an initial git branch:
 
+```bash
 git checkout -b hmw5-initial_setup
+```
 
 This command tries to find branch name “hmw5-initial_setup” and when not found (it creates it given the command string “-b”) and checks it out.
 When I was done with this branch I applied the following commands to merge the changes into the master branch:
 
+```bash
 git  checkout master
 git merge hmw5-initial_setup
+```
 
 As I continued wiring the different pieces of code for this assignment I created appropriate branch names and these can be accessed via my repository as outlined above.
+
+I then created a new empty MVC project. The assignment instructions indicate to have a proper .gitignore file so that no temporary, binary and database files will be uploaded to the repository, but I had already placed a robust .gitignore file in the root folder of my repository for the previous MVC project assignment. The file can be accessed [here]( https://github.com/lloyh/lloyh.github.io/blob/master/.gitignore).
+
+
+
+
+
 
 
 Here is where I created the model that would represent the data inside the database. *this is very important* **this is even more important** ***This is the most important thing ever!***
