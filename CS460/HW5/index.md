@@ -222,32 +222,137 @@ namespace Homework5.Controllers
 }
 ```
 
+### The Views
+
+I created strongly typed views using Razr code. As mentioned before, my project only renders two pages, the index page that contains the input form and the Requests page that renders all data in the table.
+
+The home page:
+```charp
+@model Homework5.Models.AddressChange
+
+@{
+    ViewBag.Title = "New Request";
+}
+
+<h2>Submit a new Adress Change Request</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-sm-1 col-lg-2"></div>
+        <div class="col-sm-10 col-lg-8">
+            <div class="form-horizontal">
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.ODL, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ODL, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ODL, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.DOB, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-left form-group-full">
+                    @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.NewStreetAddress, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.NewStreetAddress, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NewStreetAddress, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.NewCity, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.NewCity, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NewCity, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.NewState, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.NewState, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NewState, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.NewZipCode, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.NewZipCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NewZipCode, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.NewCounty, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.NewCounty, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NewCounty, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    @Html.LabelFor(model => model.DateSubmitted, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.DateSubmitted, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DateSubmitted, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-left">
+                    <input class="btn btn-primary" type="submit" value="Submit" formmethod="post" />
+                    <input class="btn btn-default" type="reset" value="Reset">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1 col-lg-2"></div>
+    </div>
+}
+
+
+```
+
+The Requests page:
+```charp
+@model IEnumerable<Homework5.Models.AddressChange>
+@{
+    ViewBag.Title = "Requests";
+}
+
+<h2>Requests</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ID)</th>
+            <th>@Html.DisplayNameFor(model => model.ODL)</th>
+            <th>@Html.DisplayNameFor(model => model.DOB)</th>
+            <th>@Html.DisplayNameFor(model => model.FullName)</th>
+            <th>@Html.DisplayNameFor(model => model.NewStreetAddress)</th>
+            <th>@Html.DisplayNameFor(model => model.NewCity)</th>
+            <th>@Html.DisplayNameFor(model => model.NewState)</th>
+            <th>@Html.DisplayNameFor(model => model.NewZipCode)</th>
+            <th>@Html.DisplayNameFor(model => model.NewCounty)</th>
+            <th>@Html.DisplayNameFor(model => model.DateSubmitted)</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => item.ID)</td>
+                <td>@Html.DisplayFor(ModelItem => item.ODL)</td>
+                <td>@Html.DisplayFor(ModelItem => item.DOB)</td>
+                <td>@Html.DisplayFor(ModelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewStreetAddress)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewCity)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewState)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewZipCode)</td>
+                <td>@Html.DisplayFor(ModelItem => item.NewCounty)</td>
+                <td>@Html.DisplayFor(ModelItem => item.DateSubmitted)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+```
 
 
 
 
 
 
+### Video of the Application
 
-
-
-
-
-
-
-
-
-
-
-*this is very important* **this is even more important** ***This is the most important thing ever!***
-
-
-
-
-
-
-
-
-
-### Video of Application
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yuS1zEkQh5I?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=yuS1zEkQh5I" frameborder="0" gesture="media" allowfullscreen></iframe>
