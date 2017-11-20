@@ -226,7 +226,7 @@ namespace Homework5.Controllers
 I created strongly typed views using Razr code. As mentioned before, my project only renders two pages, the index page that contains the input form and the Requests page that renders all data in the table.
 
 The home page:
-```charp
+```html
 @model Homework5.Models.AddressChange
 
 @{
