@@ -82,6 +82,109 @@ This the down.sql script
 DROP TABLE AddressChanges;
 ```
 
+### Creating the model class and the database context class
+
+I wrote the model class (AddressChange.cs) and placed it inside the Model folder and wrote the context class (AddressChangeContext.cs) and placed it inside a new folder named “DAL” (Data Access Layer) as outlined in the assignment requirements. This is so that the data layer is separated from the data processing layer.
+
+The model class code:
+```csharp
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace Homework5.Models
+{
+    public class AddressChange
+    {
+        [Required]
+        [Display(Name = "Change ID")]
+        public int ID { get; set; }
+
+        [Required]
+        [Display(Name = "ODL")]
+        public int ODL { get; set; }
+
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Date of Birth")]
+        public DateTime DOB { get; set; }
+
+
+        [Required]
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+
+        [Required]
+        [Display(Name = "New Street Address")]
+        public string NewStreetAddress { get; set; }
+
+        [Required]
+        [Display(Name = "City")]
+        public string NewCity { get; set; }
+
+        [Required]
+        [Display(Name = "State")]
+        public string NewState { get; set; }
+
+        [Required]
+        [Display(Name = "Zip Code")]
+        public int NewZipCode { get; set; }
+
+        [Required]
+        [Display(Name = "County")]
+        public string NewCounty { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Date Submitted")]
+        public DateTime DateSubmitted { get; set; }
+    }
+}
+```
+
+The data context class code:
+```csharp
+using Homework5.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace Homework5.DAL
+{
+    public class AddressChangeContext : DbContext
+    {
+            /// <summary>
+            /// Context constructor
+            /// </summary>
+            public AddressChangeContext() : base("name=theDBContext") { }
+
+            /// <summary>
+            /// Method that gets and sets each record in the table
+            /// </summary>
+            public virtual DbSet<AddressChange> AddressChanges { get; set; }
+
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
