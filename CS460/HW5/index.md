@@ -10,7 +10,7 @@ layout: default
 
 In this assignment we were tasked with creating an ASP.NET MVC 5 project with a simple one-table local database. The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5.html) The assignment consists of creating a DMV address change request in which a simple form is presented for someone moving to fill out. The form is submitted and entered into a local database. Another page simply displays the database table with all its records.
 
-The MVC project code I wrote for this homework can be accessed under the following folder in my main portfolio repository for [this assignment: Homework 5]( https://github.com/lloyh/lloyh.github.io/tree/master/CS460/HW5)
+The MVC project code I wrote for this homework can be accessed under the following folder in my main portfolio repository for this assignment: [Homework 5]( https://github.com/lloyh/lloyh.github.io/tree/master/CS460/HW5)
 
 ### Initial Git Setup
 
@@ -32,7 +32,46 @@ As I continued wiring the different pieces of code for this assignment I created
 
 I then created a new empty MVC project. The assignment instructions indicate to have a proper .gitignore file so that no temporary, binary and database files will be uploaded to the repository, but I had already placed a robust .gitignore file in the root folder of my repository for the previous MVC project assignment. The file can be accessed [here]( https://github.com/lloyh/lloyh.github.io/blob/master/.gitignore).
 
+### Creating the Data Model
 
+Under the App_Data folder, I added two SQL scripts, the up.sql and down.sql scripts. The up.sql script creates a table in the database and inserts some test values and the down.sql script deletes the table altogether.
+
+This is the up.sql script
+```sql
+-- AddressChanges table
+CREATE TABLE AddressChanges
+(
+	ID					INT IDENTITY (1,1) NOT NULL,
+	ODL					INT NOT NULL,
+	DOB					DATE NOT NULL,		
+	FullName			NVARCHAR(100) NOT NULL,
+	NewStreetAddress	NVARCHAR(100) NOT NULL,
+	NewCity				NVARCHAR(100) NOT NULL,
+	NewState			NVARCHAR(100) NOT NULL,
+	NewZipCode			INT NOT NULL,
+	NewCounty			NVARCHAR(100) NOT NULL,
+	DateSubmitted		DATE NOT NULL
+	CONSTRAINT [PK_dbo.AddressChanges] PRIMARY KEY CLUSTERED (ID ASC)
+);
+	
+
+INSERT INTO AddressChanges (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
+	(12332132,'1984-11-05','James Tiberius Kirk','4550 Madrona Avenue','Salem','Oregon',97306,'Marion','2017-05-11');
+INSERT INTO AddressChanges (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
+	(45665465,'1974-07-01','Jean-Luc Picard','5370 Commercial Street','Salem','Oregon',97303,'Marion','2017-04-20');
+INSERT INTO AddressChanges (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
+	(78998798,'1970-05-07','Benjamin Sisko','309 SW 6th Avenue','Portland','Oregon',97204,'Multnomah','2016-01-01');
+INSERT INTO AddressChanges (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
+	(15995195,'1980-04-25','Kathryn Janeway','135 Oakway Road','Eugene','Oregon',97401,'Lane','2017-02-15');
+INSERT INTO AddressChanges (ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted) VALUES
+	(75335735,'1980-04-25','Jonathan Archer','1001 North Arney Road','Woodburn','Oregon',97071,'Marion','2017-10-15');
+```
+
+This the down.sql script
+```sql
+-- Delete the table from the database
+DROP TABLE AddressChanges;
+```
 
 
 
