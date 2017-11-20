@@ -303,7 +303,7 @@ The home page:
 ```
 
 The Requests page:
-```charp
+```html
 @model IEnumerable<Homework5.Models.AddressChange>
 @{
     ViewBag.Title = "Requests";
@@ -347,10 +347,6 @@ The Requests page:
 
 
 ```
-
-
-
-
 
 
 ### Video of the Application
