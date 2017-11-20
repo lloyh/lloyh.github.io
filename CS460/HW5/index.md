@@ -5,7 +5,6 @@ layout: default
 
 <div style="overflow: hidden; background-color: #333; color: white; width: 50px; padding: 0.5em; text-align: center" onclick="window.location='https://lloyh.github.io/home';">Home</div>
 
-# **********UNDER CONSTRUCTION****************
 # Homework 5: ASP.NET MVC 5 Project with a Local Database
 
 In this assignment we were tasked with creating an ASP.NET MVC 5 project with a simple one-table local database. The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5.html) The assignment consists of creating a DMV address change request in which a simple form is presented for someone moving to fill out. The form is submitted and entered into a local database. Another page simply displays the database table with all its records.
