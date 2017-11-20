@@ -1,4 +1,4 @@
-theme: jekyll-theme-midnight
+theme: jekyll-theme-dinky
 title: "Luis Loyh"
 plugins:
   - jekyll-mentions
