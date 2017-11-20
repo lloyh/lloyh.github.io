@@ -172,6 +172,56 @@ namespace Homework5.DAL
 }
 ```
 
+### The Controller
+
+The controller (HomeController.cs) for my pages is rather simple, first the index page (the home page) loads the form to fill out, the user then enters the data (using model binding), if the input is valid, it returns to the view form; if not, it presents error messages below each textbox. The controller also handles a View Requests page where it sends all data in table to the view page.
+
+```csharp
+using Homework5.DAL;
+using Homework5.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Homework5.Controllers
+{
+    public class HomeController : Controller
+    {
+        private AddressChangeContext myDatabase = new AddressChangeContext();
+        // GET: Home
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        // POST: Home
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index([Bind(Include = "ID, ODL, DOB, FullName, NewStreetAddress, NewCity, NewState, NewZipCode, NewCounty, DateSubmitted")] AddressChange change)
+        {
+            if (ModelState.IsValid)
+            {
+                myDatabase.AddressChanges.Add(change);
+                myDatabase.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(change);
+        }
+
+        // GET: requests
+        [HttpGet]
+        public ActionResult Requests()
+        {
+            return View(myDatabase.AddressChanges.ToList());
+        }
+
+    }
+}
+```
+
 
 
 
