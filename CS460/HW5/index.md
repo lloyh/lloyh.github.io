@@ -34,7 +34,16 @@ I then created a new empty MVC project. The assignment instructions indicate to 
 
 ### Creating the Data Model
 
-Under the App_Data folder, I added two SQL scripts, the up.sql and down.sql scripts. The up.sql script creates a table in the database and inserts some test values and the down.sql script deletes the table altogether.
+Under the App_Data folder, I added two SQL scripts, the up.sql and down.sql scripts. The up.sql script creates a table in the database and inserts some test values and the down.sql script deletes the table altogether. I used the Visual Studio built-in database LocalDB and added the following connection string to my Web.config file:
+
+```xml
+<connectionStrings>
+    <add name ="theDBContext" 
+         connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Luis Loyh\Dropbox\School\Fall 2017\CS 460\Portfolio\CS460\HW5\Homework5\Homework5\App_Data\ChangeDatabase.mdf;Integrated Security=True"
+         providerName="System.Data.SqlClient"/>
+</connectionStrings>
+
+```
 
 This is the up.sql script
 ```sql
