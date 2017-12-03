@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.pictureFrame{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 5px;
+}
