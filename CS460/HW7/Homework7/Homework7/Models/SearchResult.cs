@@ -8,5 +8,6 @@ namespace Homework7.Models
     public class SearchResult
     {
         public string image { get; set; }
+        public string msg { get; set; }
     }
 }

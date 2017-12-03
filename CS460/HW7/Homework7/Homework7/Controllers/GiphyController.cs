@@ -21,10 +21,28 @@ namespace Homework7.Controllers
         [HttpGet]
         public JsonResult SearchGiphy()
         {
+            List<SearchResult> searchResult = new List<SearchResult>();
+            int limit;
+            try
+            {
+                limit = Convert.ToInt32(Request.QueryString[name: "limit"]);
+                limit = (limit > 20) ? 20 : limit;
+            }
+            catch(Exception e)
+            {
+                SearchResult result = new SearchResult();
+                result.msg = "error-result";
+                searchResult.Add(result);
+                return Json(searchResult, JsonRequestBehavior.AllowGet);
+            }
+            
             string url = "https://api.giphy.com/v1/gifs/search?api_key="
                        + System.Web.Configuration.WebConfigurationManager.AppSettings["APIKey"]
                        + "&q="
-                       + Request.QueryString["search"];
+                       + Request.QueryString["search"]
+                       + "&limit="
+                       + limit.ToString();
+            
 
             WebRequest webRequest = WebRequest.Create(url);
             Stream theStream = webRequest.GetResponse().GetResponseStream();
@@ -33,9 +51,7 @@ namespace Homework7.Controllers
             RootObject jsonResult = new System.Web.Script.Serialization.JavaScriptSerializer()
                                   .Deserialize<RootObject>(reader.ReadToEnd());
 
-            List<SearchResult> searchResult = new List<SearchResult>();
-
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < limit; i++)
             {
                 SearchResult result = new SearchResult();
                 result.image = jsonResult.data[i].images.downsized_medium.url;

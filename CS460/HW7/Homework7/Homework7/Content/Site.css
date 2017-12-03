@@ -24,8 +24,21 @@ textarea {
 }
 
 .pictureFrame{
-    width: 250px;
-    height: 250px;
     float: left;
     margin: 5px;
+}
+
+.frame-sm {
+    width: 250px;
+    width: 250px;
+}
+
+.frame-md {
+    width: 350px;
+    width: 350px;
+}
+
+.frame-lg {
+    width: 450px;
+    width: 450px;
 }

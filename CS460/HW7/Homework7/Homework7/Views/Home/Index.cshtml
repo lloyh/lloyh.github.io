@@ -6,8 +6,18 @@
     <h1>Search Gifs</h1>    
 </div>
 
-<input type="text" id="searchBox" class="form-control"/>
-<input id="searchButton" type="button" class="btn btn-primary" value="Search" />
+<div class="row">
+    <input type="text" id="searchBox" class="form-control" />
+    <label for="limit">Number of Images:</label>
+    <input id="limit" name="limit" type="number" class="form-control" min="1" max="20" step="1" value="1" />
+    <label for="imageSize">Image Size:</label>
+    <select id="imageSize" class="form-control">
+        <option value="0">small</option>
+        <option value="1">medium</option>
+        <option value="2">large</option>
+    </select>
+    <input id="searchButton" type="button" class="btn btn-primary" value="Search" />
+</div>
 
 <div class="row">
     <div id="outputBox" class="col-lg-12">
