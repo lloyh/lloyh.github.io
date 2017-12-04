@@ -1,4 +1,5 @@
-﻿using Homework7.Models;
+﻿using Homework7.DAL;
+using Homework7.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +13,8 @@ namespace Homework7.Controllers
 {
     public class GiphyController : Controller
     {
+        private SearchesContext MyDB = new SearchesContext();
+
         // GET: Giphy
         public ActionResult Index()
         {
@@ -57,6 +60,15 @@ namespace Homework7.Controllers
                 result.image = jsonResult.data[i].images.downsized_medium.url;
                 searchResult.Add(result);
             }
+
+            var record = MyDB.Searches.Create();
+            record.QUERY = Request.QueryString["search"];
+            record.IP_ADDRESS = Request.UserHostAddress;
+            record.USERAGENT = Request.UserAgent;
+            record.SEARCH_DATE = DateTime.Now;
+
+            MyDB.Searches.Add(record);
+            MyDB.SaveChanges();
 
             return Json(searchResult, JsonRequestBehavior.AllowGet);
         }
