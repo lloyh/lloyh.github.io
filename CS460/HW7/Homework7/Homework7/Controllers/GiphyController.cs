@@ -38,7 +38,15 @@ namespace Homework7.Controllers
                 searchResult.Add(result);
                 return Json(searchResult, JsonRequestBehavior.AllowGet);
             }
-            
+            //check if client sent an empty search string or corrupted limit data
+            if (Request.QueryString["search"] == "" || Request.QueryString["search"] == null || limit < 1)
+            {
+                SearchResult result = new SearchResult();
+                result.msg = "error-result";
+                searchResult.Add(result);
+                return Json(searchResult, JsonRequestBehavior.AllowGet);
+            }
+                        
             string url = "https://api.giphy.com/v1/gifs/search?api_key="
                        + System.Web.Configuration.WebConfigurationManager.AppSettings["APIKey"]
                        + "&q="

@@ -36,7 +36,7 @@ function displayData(data) {
     $("#outputBox").empty();
     $.each(data, function (i, image) {
         if (image["msg"] == "error-result") {
-            alert("Invalid number of images specified.");
+            alert("Invalid Data Entered!");
         }
         else {
             $("#outputBox").append(
