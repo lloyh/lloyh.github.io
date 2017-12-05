@@ -18,6 +18,7 @@ namespace Homework8.Models
 
         [Required]
         [StringLength(100)]
+        [Display(Name ="Genre")]
         public string GenreName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -18,12 +18,18 @@ namespace Homework8.Models
 
         [Required]
         [StringLength(50)]
+        [Display(Name ="Artist Name")]
         public string ArtistName { get; set; }
 
+        [Required]
         [Column(TypeName = "date")]
+        [ValidateDate]
+        [Display(Name ="Birth Date")]
         public DateTime DOB { get; set; }
 
+        [Required]
         [StringLength(100)]
+        [Display(Name ="Birth City")]
         public string BirthCity { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
