@@ -23,5 +23,6 @@ namespace Homework8.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Classification> Classifications { get; set; }
+        //public int ID { get; internal set; }
     }
 }
