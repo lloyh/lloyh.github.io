@@ -3,11 +3,15 @@ title: Luis Loyh
 layout: default
 ---
 
-## Homework 7
+<div style="overflow: hidden; background-color: #333; color: white; width: 50px; padding: 0.5em; text-align: center" onclick="window.location='https://lloyh.github.io/home';">Home</div>
+
+# Homework 7: An MVC web application that employs AJAX to build responsive views
 
 This assignment is a single-page responsive application. The page loads from the server and presents an interface to load Gif images that the server pulls from Giphy.com via an API.
 
 The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7.html)
+
+The MVC project code I wrote for this homework can be accessed under the following folder in my main portfolio repository for this assignment: [Homework 7]( https://github.com/lloyh/lloyh.github.io/tree/master/CS460/HW7)
 
 ### Initial Git Setup
 
