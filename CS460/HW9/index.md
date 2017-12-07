@@ -26,7 +26,14 @@ In Visual Studio, I connected to the Azure database and ran the up.sql script.
 
 ![up.sql script](2.JPG)
 
-
-
 ### Step 3: Push content to web server using WebDeploy
 
+I then published the application via Visual Studio.
+
+![Publishing the App](3.JPG)
+
+After publishing the application, I went to my Azure Web application “Homework9App,” selected Application settings and entered the connection string for the Azure database I created earlier and the context name context name.
+
+![Connection String](4.JPG)
+
+![Home Page](5.JPG)
