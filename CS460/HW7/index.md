@@ -7,6 +7,8 @@ layout: default
 
 This assignment is a single-page responsive application. The page loads from the server and presents an interface to load Gif images that the server pulls from Giphy.com via an API.
 
+The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7.html)
+
 ### Initial Git Setup
 
 I began this project by creating an initial git branch:
@@ -206,8 +208,6 @@ for (int i = 0; i < limit; i++)
 
 ### Requirement 7
 The Code and *Demo Video* are nicely arranged into the Portfolio; Portfolio is organized and easy to read.
-
-The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7.html)
 
 ### Video of the Application
 
