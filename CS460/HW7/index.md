@@ -5,9 +5,11 @@ layout: default
 
 ## Homework 7
 
+This assignment is a single-page responsive application. The page loads from the server and presents an interface to load Gif images that the server pulls from Giphy.com via an API.
+
 ### Requirement 1
 
-Has a single page Javascript application; all functionality is driven by AJAX calls Javascript is in a separate file in the Scripts folder and is included via @section. Uses jQuery.
+Has a single page Javascript application; all functionality is driven by AJAX calls Javascript is in a separate file in the Scripts folder and is included via "@section". Uses jQuery.
 
 ```js
 $("#searchButton").click(function () {
