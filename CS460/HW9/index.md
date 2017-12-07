@@ -37,3 +37,7 @@ After publishing the application, I went to my Azure Web application “Homework
 ![Connection String](4.JPG)
 
 ![Home Page](5.JPG)
+
+### Video of the Application
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rLU1IebIbh8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=rLU1IebIbh8" frameborder="0" gesture="media" allowfullscreen></iframe>

@@ -117,13 +117,15 @@ DROP TABLE Artists;
 GO
 DROP TABLE Genres;
 ```
-This is the ER Diagram of the database relationship
 
-![Diagram](Diagram.JPG)
 ### Requirement 2
 Tables for Artists, ArtWorks, Genres and
 Classifications are correct; have appropriate
 names, types, relations/constraints
+
+This is the ER Diagram of the database relationship
+
+![Diagram](Diagram.JPG)
 
 ### Requirement 3 
 Db is populated with given seed data
@@ -132,21 +134,77 @@ pages; list pages show all entities
 Has CRUD functionality for Artists; all parts
 work as expected
 
+![Home Page](1.JPG)
+
 ### Requirement 4
 Artist Edit page does not allow long names, all
 attributes are required and no future birthdates
 Has Genres buttons that work, shows works and
 artists, sorted correctly
 
+Artist Name limited to 50 characters:
+```csharp
+		[Required]
+        [StringLength(50)]
+        [Display(Name ="Artist Name")]
+        public string ArtistName { get; set; }
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rLU1IebIbh8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=rLU1IebIbh8" frameborder="0" gesture="media" allowfullscreen></iframe>
+
 ### Requirement 5
 Genres feature uses AJAX
 
 ```js
-//javascript here
+function retrieveGenre(id) {
+    $.ajax({
+        type: "GET",
+        url: "/Home/Genre/" + id,
+        dataType: "json",
+        success: function (data) { display(data); },
+        error: function (data) { alert("Error getting JSon result! Try submitting data again"); }
+    });
+}
+
+function display(data) {
+    $("#artworkOutput").empty();
+    var string = "<table class='table table-striped table-hover'>"
+        + "<thead><th class='text-center'>Artwork"
+        + "</th><th class='text-center'>Artist</th></thead>"
+        + "<tbody>";
+    $.each(data, function (i, item) {
+        string = string
+            + "<tr><td>"
+            + item["Artwork"]
+            + "</td><td>"
+            + item["Artist"]
+            + "</td></tr>";
+    });
+    string += "</tbody></table>"
+    $("#artworkOutput").append(string);
+}
 ```
 
+
 ```csharp
-// Jsonresult code here
+public JsonResult Genre(int id)
+        {            
+            List<ArtWorkData> list = new List<ArtWorkData>();            
+            var artList = db.Genres.Where(g => g.GenreID == id)
+                .Select(s => s.Classifications)
+                .FirstOrDefault()
+                .Select(x => new { x.ArtWork.Title, x.ArtWork.Artist.ArtistName })
+                .OrderBy(o => o.Title)
+                .ToList();            
+            foreach (var v in artList)
+            {                
+                ArtWorkData piece = new ArtWorkData();                
+                piece.Artist = v.ArtistName;
+                piece.Artwork = v.Title;                
+                list.Add(piece);
+            }
+            return Json(list, JsonRequestBehavior.AllowGet);
+        }
 ```
 
 ### Requirement 6
@@ -160,3 +218,7 @@ git checkout master
 git merge hmw8 -m "merge homework 8"
 git push origin master
 ```
+
+### Video of the Application
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rLU1IebIbh8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=rLU1IebIbh8" frameborder="0" gesture="media" allowfullscreen></iframe>
