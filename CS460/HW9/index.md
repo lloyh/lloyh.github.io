@@ -1,7 +1,11 @@
-Live website located [here](http://homework9app.azurewebsites.net).
+---
+title: Luis Loyh
+layout: default
+---
 
 ## Homework 9
 Screenshots coming soon!
+Live website located [here](http://homework9app.azurewebsites.net).
 
 ### Step 1: Setup Database
 

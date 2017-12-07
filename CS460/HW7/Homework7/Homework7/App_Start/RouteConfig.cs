@@ -14,6 +14,12 @@ namespace Homework7
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "GetGifs",
+                url: "GetGifs",
+                defaults: new { controller = "Giphy", action = "SearchGiphy" }
+             );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

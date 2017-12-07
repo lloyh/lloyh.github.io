@@ -5,7 +5,7 @@ $("#searchButton").click(function () {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "/Giphy/SearchGiphy?search=" + $("#searchBox").val() + "&limit=" + $("#limit").val(),
+        url: "/GetGifs?search=" + $("#searchBox").val() + "&limit=" + $("#limit").val(),
         success: displayData,
         error: function () { alert("Error: Unable to get search results!"); }
         });
