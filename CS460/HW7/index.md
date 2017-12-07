@@ -7,9 +7,17 @@ layout: default
 
 This assignment is a single-page responsive application. The page loads from the server and presents an interface to load Gif images that the server pulls from Giphy.com via an API.
 
+### Initial Git Setup
+
+I began this project by creating an initial git branch:
+
+```bash
+git checkout -b hmw7
+```
+
 ### Requirement 1
 
-Has a single page Javascript application; all functionality is driven by AJAX calls Javascript is in a separate file in the Scripts folder and is included via "@section". Uses jQuery.
+The application has a single page Javascript application; all functionality is driven by AJAX calls Javascript is in a separate file in the Scripts folder and is included via "@section". Uses jQuery.
 
 ```js
 $("#searchButton").click(function () {
@@ -87,7 +95,7 @@ public JsonResult SearchGiphy()
 ```
 
 ### Requirement 2
-Uses at least one custom routing rule in RouteConfig.cs that makes sense and routes to a new controller that isn’t Home. Routes to the GiphyController using ```/GetGifs?search=term&limit=xx```.
+It uses at least one custom routing rule in RouteConfig.cs that makes sense and routes to a new controller that isn’t Home. Routes to the GiphyController using ```/GetGifs?search=term&limit=xx```.
 
 ```csharp
 routes.MapRoute(
@@ -99,7 +107,7 @@ routes.MapRoute(
 ```
 
 ### Requirement 3
-Has custom CSS in Contents; page looks nice Has a database for Logging; successfully logs every request; uses a script to create this database The page works, searches Giphy and shows results in a grid; is responsive. 
+It has custom CSS in Contents; page looks nice Has a database for Logging; successfully logs every request; uses a script to create this database The page works, searches Giphy and shows results in a grid; is responsive. 
 ```css
 .pictureFrame{
     float: left;
@@ -123,7 +131,7 @@ Has custom CSS in Contents; page looks nice Has a database for Logging; successf
 ```
 
 ### Requirement 4
-Uses JSON for AJAX calls; JSON object is used client-side to modify the DOM and build the search results.
+It uses JSON for AJAX calls; JSON object is used client-side to modify the DOM and build the search results.
 
 ```js
 function displayData(data) {
@@ -146,7 +154,7 @@ function displayData(data) {
 ```
 
 ### Requirement 5
-Has additional client side options/functionality, beyond simple search by topic. This site allows the user to choose the image size which is processed locally on the client using JavaScript.
+It has additional client side options/functionality, beyond simple search by topic. This site allows the user to choose the image size which is processed locally on the client using JavaScript.
 
 ```js
 $("#imageSize").change(function(){ changeSize();});
@@ -172,7 +180,7 @@ function changeSize() {
 ```
 
 ### Requirement 6
-Has additional server side processing (beyond topic search). This site allows the user to choose number of images returned during their search and is processed by the server.
+It has additional server side processing (beyond topic search). This site allows the user to choose number of images returned during their search and is processed by the server.
 
 ```csharp
 int limit;
@@ -197,7 +205,9 @@ for (int i = 0; i < limit; i++)
 ```
 
 ### Requirement 7
-Code and screenshots are nicely arranged into the Portfolio; Portfolio is organized and easy to read.
+The Code and *Demo Video* are nicely arranged into the Portfolio; Portfolio is organized and easy to read.
+
+The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7.html)
 
 ### Video of the Application
 
