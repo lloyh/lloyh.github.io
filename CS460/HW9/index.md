@@ -2,6 +2,7 @@
 title: Luis Loyh
 layout: default
 ---
+<div style="overflow: hidden; background-color: #333; color: white; width: 50px; padding: 0.5em; text-align: center" onclick="window.location='https://lloyh.github.io/home';">Home</div>
 
 ## Homework 9
 Screenshots coming soon!
