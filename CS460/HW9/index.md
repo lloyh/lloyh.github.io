@@ -14,10 +14,19 @@ The assignment instructions can be accessed [here.](http://www.wou.edu/~morses/c
 
 The MVC project code I wrote for this homework can be accessed under the following folder in my main portfolio repository: [Homework 8]( https://github.com/lloyh/lloyh.github.io/tree/master/CS460/HW8)
 
-### Step 1: Setup Database
+### Step 1: Setting up an Azure account, SQL Server and Database and an App Service
+
+I first created an account on Microsoft Azure at https://azure.microsoft.com/ and created an SQL Server (lloyh), an SQL Database (DB_8) and an App Service (Homework9App).
+
+![Azure Screenshot](1.JPG)
+
+### Step 2: Running the up.sql script to the Azure SQL Database
+
+In Visual Studio, I connected to the Azure database and ran the up.sql script.
+
+![up.sql script](2.JPG)
 
 
-### Step 2: Setup web server
 
 ### Step 3: Push content to web server using WebDeploy
 
