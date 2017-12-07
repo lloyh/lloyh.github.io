@@ -119,7 +119,7 @@ DROP TABLE Genres;
 ```
 This is the ER Diagram of the database relationship
 
-![Diagram](Diagram.jpg)
+![Diagram](Diagram.JPG)
 ### Requirement 2
 Tables for Artists, ArtWorks, Genres and
 Classifications are correct; have appropriate
